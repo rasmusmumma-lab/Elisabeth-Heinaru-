@@ -5,99 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stilist Elisabeth Heinaru</title>
     <style>
-        /* Disain ja stiil */
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Playfair Display', serif, Arial; /* Moekam font */
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            background-color: #ffffff;
+            color: #1a1a1a;
         }
         header {
-            background-color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 1px solid #eee;
+            background-color: #fdfbfb; /* Õrn beež/valge taust */
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Teeb pildi ümmarguseks */
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #eee;
         }
         h1 {
-            margin: 0;
-            font-weight: 300;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
         }
         .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
         }
-        .bio {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .tag {
-            display: inline-block;
-            background: #eee;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-bottom: 20px;
-        }
-        .contact-button {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            margin-top: 30px;
-            border-radius: 4px;
-            transition: opacity 0.3s;
-        }
-        .contact-button:hover {
-            opacity: 0.7;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9em;
+        .eka-tag {
             color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .btn {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 18px 40px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            border-radius: 0; /* Kandiline nupp on moes */
         }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="MVIMG_20190706_140200.jpg"alt="Elisabeth Heinaru" class="profile-pic">
     <h1>Elisabeth Heinaru</h1>
-    <p>Professionaalne Stilist</p>
+    <div class="subtitle">Stilist | Visuaalne looja</div>
 </header>
 
 <div class="container">
-    <div class="bio">
-        <span class="tag">EKA Vilistlane • Diplomeeritud Stilist</span>
-        <h2>Loo oma visioon koos minuga</h2>
-        <p>Olen lõpetanud <strong>Eesti Kunstiakadeemia (EKA)</strong> ja oman ametlikke stilisti paberid. Minu kirg on aidata inimestel leida oma unikaalne stiil, mis peegeldab nende isikupära ja annab enesekindlust.</p>
-        
-        <p>Usun, et stilistika ei ole ainult riided, vaid kunstienese väljendus. Olen valmis aitama nii igapäevase garderoobi värskendamisel kui ka eriliste sündmuste puhul.</p>
-        
-        <h3>Kuidas saan aidata?</h3>
-        <ul>
-            <li>Garderoobi analüüs ja korrastamine</li>
-            <li>Personaalsed ostureisid</li>
-            <li>Stiilinõustamine üritusteks</li>
-            <li>Fotosessioonide stilistika</li>
-        </ul>
+    <p class="eka-tag">Eesti Kunstiakadeemia vilistlane</p>
+    <p>Olen diplomeeritud stilist, kelle käekiri on sündinud EKA loomingulises õhkkonnas. Minu eesmärk on aidata sul leida stiil, mis ei ole lihtsalt riided, vaid sinu isiklik lugu.</p>
+    
+    <p>Olen valmis sind nõustama garderoobi värskendamisel, sündmuste stilistikal või ühise visiooni loomisel fotosessioonideks.</p>
 
-        <a href="mailto:e.heinaru@gmail.com" class="contact-button">Võta ühendust</a>
-    </div>
+    <a href="mailto:e.heinaru@gmail.com" class="btn">VÕTA ÜHENDUST</a>
 </div>
-
-<footer>
-    &copy; 2026 Elisabeth Heinaru. Kõik õigused kaitstud.
-</footer>
 
 </body>
 </html>
-
-.

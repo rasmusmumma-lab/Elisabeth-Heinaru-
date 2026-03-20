@@ -5,76 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stilist Elisabeth Heinaru</title>
     <style>
-        body {
-            font-family: 'Playfair Display', serif, Arial; /* Moekam font */
-            margin: 0;
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
-        header {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #fdfbfb; /* Õrn beež/valge taust */
-        }
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%; /* Teeb pildi ümmarguseks */
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #eee;
-        }
-        h1 {
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 1.8;
-        }
-        .eka-tag {
-            color: #888;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .btn {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 18px 40px;
-            text-decoration: none;
-            letter-spacing: 2px;
-            margin-top: 40px;
-            border-radius: 0; /* Kandiline nupp on moes */
-        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: #fdfbfb; color: #333; line-height: 1.6; }
+        header { padding: 60px 20px; text-align: center; background: white; border-bottom: 1px solid #eee; }
+        
+        /* Profiilipilt */
+        .profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #000; margin-bottom: 20px; }
+        
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        h1 { letter-spacing: 3px; text-transform: uppercase; font-weight: 300; }
+        .tag { display: inline-block; background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; margin-bottom: 20px; }
+
+        /* Keritav galerii stiil */
+        .slider-container { position: relative; overflow: hidden; margin: 20px 0; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; scrollbar-width: none; }
+        .slider::-webkit-scrollbar { display: none; }
+        .slider img { width: 100%; flex-shrink: 0; scroll-snap-align: start; border-radius: 5px; height: 400px; object-fit: cover; }
+        
+        h3 { margin-top: 50px; text-transform: uppercase; font-size: 0.9em; letter-spacing: 2px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .contact-button { display: inline-block; background: #000; color: #fff; padding: 15px 40px; text-decoration: none; margin: 40px 0; border-radius: 4px; transition: 0.3s; }
+        .contact-button:hover { opacity: 0.7; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="MVIMG_20190706_140200.jpg"alt="Elisabeth Heinaru" class="profile-pic">
+    <img src="PROFIIL.jpg" alt="Elisabeth Heinaru" class="profile-pic">
     <h1>Elisabeth Heinaru</h1>
-    <div class="subtitle">Stilist | Visuaalne looja</div>
+    <p>Professionaalne Stilist</p>
 </header>
 
 <div class="container">
-    <p class="eka-tag">Eesti Kunstiakadeemia vilistlane</p>
-    <p>Olen diplomeeritud stilist, kelle käekiri on sündinud EKA loomingulises õhkkonnas. Minu eesmärk on aidata sul leida stiil, mis ei ole lihtsalt riided, vaid sinu isiklik lugu.</p>
-    
-    <p>Olen valmis sind nõustama garderoobi värskendamisel, sündmuste stilistikal või ühise visiooni loomisel fotosessioonideks.</p>
+    <span class="tag">EKA Vilistlane • Diplomeeritud Stilist</span>
+    <h2>Loo oma visioon koos minuga</h2>
+    <p>Olen lõpetanud <strong>Eesti Kunstiakadeemia (EKA)</strong> ja oman ametlikke stilisti paberid. Minu kirg on aidata inimestel leida oma unikaalne stiil, mis peegeldab nende isikupära ja annab enesekindlust.</p>
 
-    <a href="mailto:e.heinaru@gmail.com" class="btn">VÕTA ÜHENDUST</a>
+    <h3>Tehtud tööd</h3>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="too1.jpg" alt="Töö 1">
+            <img src="too2.jpg" alt="Töö 2">
+            <img src="too3.jpg" alt="Töö 3">
+            <img src="too4.jpg" alt="Töö 4">
+        </div>
+        <p style="font-size: 0.8em; color: #888;">← Lükka pilti, et näha rohkem →</p>
+    </div>
+
+    <h3>Koostööd ja kuulsused</h3>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="kuulsus1.jpg" alt="Kuulsus 1">
+            <img src="kuulsus2.jpg" alt="Kuulsus 2">
+            <img src="kuulsus3.jpg" alt="Kuulsus 3">
+        </div>
+        <p style="font-size: 0.8em; color: #888;">← Lükka pilti, et näha rohkem →</p>
+    </div>
+
+    <p>Olen valmis sind aitama stilistikaga. Võta julgelt ühendust!</p>
+    
+    <a href="mailto:e.heinaru@gmail.com" class="contact-button">VÕTA ÜHENDUST</a>
 </div>
+
+<footer style="padding: 40px; text-align: center; font-size: 0.8em; color: #888;">
+    &copy; 2026 Elisabeth Heinaru
+</footer>
 
 </body>
 </html>

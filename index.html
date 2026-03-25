@@ -4,49 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stilist Elisabeth Heinaru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        <style>
-    body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; background-color: #fdfbfb; color: #333; line-height: 1.6; }
-    header { padding: 60px 20px; text-align: center; background: white; border-bottom: 1px solid #eee; }
-    
-    .profile-pic { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #000; margin-bottom: 20px; }
-    
-    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; text-align: center; }
-    h1 { letter-spacing: 3px; text-transform: uppercase; font-weight: 300; }
-    .tag { display: inline-block; background: #eee; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; margin-bottom: 20px; }
-
-    .slider-container { position: relative; margin: 20px 0; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    
-    .slider { 
-        display: flex; 
-        overflow-x: auto; 
-        scroll-snap-type: x mandatory; 
-        gap: 15px; 
-        scrollbar-width: thin; 
-        padding-bottom: 10px;
-    }
-
-    .slider img { 
-        flex-shrink: 0; 
-        scroll-snap-align: start; 
-        border-radius: 5px; 
-        height: 450px;
-        width: auto;  
-        object-fit: cover; 
-    }
-
-    @media (max-width: 600px) {
-        .slider img {
-            width: 100%; 
-            height: 400px;
+        :root {
+            --bg-color: #f9f7f2;    /* Hele beežikas valge */
+            --accent-beige: #f0ede4; /* Veidi tumedam beež sektsioonidele */
+            --text-black: #1a1a1a;   /* Sügav must tekstile */
+            --soft-white: #ffffff;
         }
-        h1 { font-size: 1.5em; }
-    }
-    
-    h3 { margin-top: 50px; text-transform: uppercase; font-size: 0.9em; letter-spacing: 2px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-    .contact-button { display: inline-block; background: #000; color: #fff; padding: 15px 40px; text-decoration: none; margin: 40px 0; border-radius: 4px; transition: 0.3s; }
-    .contact-button:hover { opacity: 0.7; }
-</style>
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            background-color: var(--bg-color); 
+            color: var(--text-black); 
+            line-height: 1.8; 
+        }
+
+        /* HEADER & PROFIIL */
+        header { 
+            padding: 100px 20px; 
+            text-align: center; 
+            background: var(--soft-white); 
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .profile-pic { 
+            width: 220px; 
+            height: 220px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 1px solid #ddd; 
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3rem; 
+            margin: 0; 
+            letter-spacing: -1px; 
+            line-height: 1.1;
+        }
+
+        header p { 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 0.9rem; 
+            font-weight: 600; 
+            margin-top: 15px;
+            color: #666;
+        }
+
+        /* KONTEINER */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+        }
+
+        .tag { 
+            display: inline-block; 
+            background: var(--accent-beige); 
+            padding: 8px 20px; 
+            border-radius: 50px; 
+            font-size: 0.75rem; 
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px; 
+        }
+
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; 
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .intro-text { 
+            font-size: 1.2rem; 
+            max-width: 700px; 
+            margin: 0 auto 60px auto; 
+            color: #444;
+            text-align: center;
+        }
+
+        /* GALERII STIIL */
+        h3 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 80px; 
+            margin-bottom: 30px;
+            text-align: left;
+            border-bottom: 2px solid var(--text-black);
+            display: inline-block;
+        }
+
+        .slider-container { 
+            position: relative; 
+            margin: 20px 0 60px 0; 
+        }
+
+        .slider { 
+            display: flex; 
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
+            gap: 20px; 
+            scrollbar-width: none; 
+            padding-bottom: 20px;
+        }
+
+        .slider::-webkit-scrollbar { display: none; }
+
+        .slider img { 
+            flex-shrink: 0; 
+            scroll-snap-align: start; 
+            border-radius: 0px; /* Kandilised pildid on hetkel moekamad */
+            height: 550px; 
+            width: auto; 
+            object-fit: cover; 
+            transition: transform 0.5s ease;
+        }
+
+        .slider img:hover {
+            transform: scale(1.02);
+        }
+
+        /* NUPP */
+        .contact-section {
+            background-color: var(--accent-beige);
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-button { 
+            display: inline-block; 
+            background: var(--text-black); 
+            color: #fff; 
+            padding: 20px 60px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            border-radius: 0; 
+            transition: 0.4s; 
+        }
+
+        .contact-button:hover { 
+            background: #444; 
+            transform: translateY(-3px);
+        }
+
+        /* MOBIIL */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .slider img { height: 400px; width: 85vw; }
+            header { padding: 60px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -54,13 +172,17 @@
 <header>
     <img src="IMG_20251209_214551912.jpg" alt="Elisabeth Heinaru" class="profile-pic">
     <h1>Elisabeth Heinaru</h1>
-    <p>Professionaalne Stilist</p>
+    <p>Moestilist & Visuaalne looja</p>
 </header>
 
 <div class="container">
-    <span class="tag">EKA Vilistlane • Diplomeeritud Stilist</span>
-    <h2>Loo oma visioon koos minuga</h2>
-    <p>Olen lõpetanud <strong>Eesti Kunstiakadeemia (EKA)</strong> ja oman ametlikke stilisti paberid. Minu kirg on aidata inimestel leida oma unikaalne stiil, mis peegeldab nende isikupära ja annab enesekindlust.</p>
+    <div style="text-align: center;">
+        <span class="tag">EKA Vilistlane • Sertifitseeritud Stilist</span>
+        <h2>Loo oma visioon koos minuga</h2>
+        <p class="intro-text">
+            Olen lõpetanud <strong>Eesti Kunstiakadeemia</strong>. Minu töö on midagi enamat kui riided – see on enesekindluse ja visuaalse identiteedi loomine.
+        </p>
+    </div>
 
     <h3>Tehtud tööd</h3>
     <div class="slider-container">
@@ -70,26 +192,27 @@
             <img src="Screenshot_20260320-130314~2.png" alt="Töö 3">
             <img src="Messenger_creation_A218E3CE-C645-4D9F-9EDC-F8EF114776C5.jpeg" alt="Töö 4">
         </div>
-        <p style="font-size: 0.8em; color: #888;">← Lükka pilti, et näha rohkem →</p>
     </div>
 
-    <h3>Koostööd ja kuulsused</h3>
+    <h3>Koostööd</h3>
     <div class="slider-container">
         <div class="slider">
-            <img src="DSC00117.jpg" alt="Kuulsus 1">
-            <img src="Screenshot_20260320-131556~2.png" alt="Kuulsus 2">
-            <img src="IMG_20251207_163225_923.webp" alt="Kuulsus 3">
+            <img src="DSC00117.jpg" alt="Koostöö 1">
+            <img src="Screenshot_20260320-131556~2.png" alt="Koostöö 2">
+            <img src="IMG_20251207_163225_923.webp" alt="Koostöö 3">
         </div>
-        <p style="font-size: 0.8em; color: #888;">← Lükka pilti, et näha rohkem →</p>
     </div>
-
-    <p>Olen valmis sind aitama stilistikaga. Võta julgelt ühendust!</p>
-    
-    <a href="mailto:e.heinaru@gmail.com" class="contact-button">VÕTA ÜHENDUST</a>
 </div>
 
-<footer style="padding: 40px; text-align: center; font-size: 0.8em; color: #888;">
-    &copy; 2026 Elisabeth Heinaru
+<div class="contact-section">
+    <h2>Kas oled valmis uueks välimuseks?</h2>
+    <p>Võta minuga ühendust ja leiame koos sinu stiili.</p>
+    <br>
+    <a href="mailto:e.heinaru@gmail.com" class="contact-button">BRONEERI KONSULTATSIOON</a>
+</div>
+
+<footer style="padding: 60px; text-align: center; font-size: 0.9rem; color: #888; background: #fff;">
+    &copy; 2026 Elisabeth Heinaru • Tallinn, Eesti
 </footer>
 
 </body>
